@@ -27,9 +27,10 @@ namespace QuickHull
         private void GenerateRandomPoints()
         {
             points.Clear();
-            for (int i = 0; i < 15; i++)
+            var pointsCount = (textBox1.Text == "") ? 10 : int.Parse(textBox1.Text); 
+            for (int i = 0; i < pointsCount; i++)
             {
-                points.Add(new Point(rand.Next(pictureBox1.Width), rand.Next(pictureBox1.Height)));
+                points.Add(new Point(rand.Next(pictureBox1.Width - 50), rand.Next(pictureBox1.Height - 50)));
             }
         }
 
